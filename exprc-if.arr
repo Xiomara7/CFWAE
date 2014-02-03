@@ -63,10 +63,10 @@ fun interp(e :: ExprC) -> Number:
     | numC(n) => n
     | plusC(l, r) => interp(l) + interp(r)
     | multC(l, r) => interp(l) * interp(r)
-    | if0C(i, th, els) => if interp(i) == 0:
-                            interp(els)
-                          else:
+    | if0C(i, th, els) => if interp(i) <> 0:
                             interp(th)
+                          else:
+                            interp(els)
                           end
   end
 where:
