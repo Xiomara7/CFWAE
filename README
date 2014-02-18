@@ -1,1 +1,7 @@
+The parser defines a language construct called if0
+
+(if0 {test-expression}
+     {then-expression}
+     {else-expression})
+
 The if0 evaluates the test-expression, and if the result is different from 0, it evaluates the then-expression, if the result of the test-expression is 0, the else-expression is evaluated.
